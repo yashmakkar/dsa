@@ -17,7 +17,7 @@
   - Pair Sum problems
   - Frequency-based problems
 
-## 📌 Learning (Initial Approach → Optimized Solution)
+---
 ### Best Time to Buy and Sell Stock (LeetCode 121)
 
 - **Reduced State:**  
@@ -37,3 +37,36 @@
 
 - **Quality Beyond Complexity:**  
   Both versions run in `O(n)` time and `O(1)` space, but the optimized version is **simpler, clearer, and interview-friendly**.
+
+
+---
+### Subarray Sum Equals K – (LeetCode 560)
+
+**Pattern:** Prefix Sum + Hash Map
+
+**Key Idea:**
+If  
+`prefix_sum[j] - prefix_sum[i] = k`  
+→ subarray `nums[i+1 ... j]` sums to `k`
+
+**Core Logic:**
+- Maintain running prefix sum
+- Store prefix sum frequencies in a hash map
+- For each index, add `freq[prefix_sum - k]` to result
+
+**Important Initialization:**
+```python
+d = {0: 1}
+```
+- **Handles subarrays starting at index `0`**
+
+### Why Not Sliding Window?
+- Fails with negative numbers  
+- Prefix sum works for all integers  
+
+### Complexity
+- **Time:** `O(n)`  
+- **Space:** `O(n)`  
+
+### Interview Trigger
+> Subarray sum + negatives → **Prefix Sum + Hash Map**
