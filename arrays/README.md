@@ -70,3 +70,25 @@ d = {0: 1}
 
 ### Interview Trigger
 > Subarray sum + negatives → **Prefix Sum + Hash Map**
+
+
+---
+### Intersection of Two Arrays – (LeetCode 349)
+
+**Pattern:** Hash Set  
+
+**Approach:**
+- Convert both arrays to sets to remove duplicates
+- Iterate over the smaller set
+- Check membership in the other set
+
+**Why Hash Set?**
+- Constant-time lookup `O(1)`
+- Eliminates duplicate elements automatically
+
+**Complexity:**
+- **Time:** `O(n + m)`
+- **Space:** `O(n + m)`
+
+**Interview Trigger:**
+> Unique intersection → **Set / Hashing**
