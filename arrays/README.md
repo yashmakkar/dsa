@@ -92,3 +92,26 @@ d = {0: 1}
 
 **Interview Trigger:**
 > Unique intersection → **Set / Hashing**
+
+
+---
+
+### Maximum Subarray
+
+**Pattern:** Kadane’s Algorithm (Dynamic Programming)
+
+**Core Idea:**
+- At each index, decide:
+  - Extend previous subarray, or
+  - Start a new subarray from current element
+
+**Why It Works:**
+- Negative prefix reduces future sum → discard it
+- Track global maximum while iterating
+
+**Complexity:**
+- **Time:** `O(n)`
+- **Space:** `O(1)`
+
+**Interview Trigger:**
+> Maximum contiguous sum → **Kadane’s Algorithm**
