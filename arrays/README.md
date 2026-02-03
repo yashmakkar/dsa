@@ -96,7 +96,7 @@ d = {0: 1}
 
 ---
 
-### Maximum Subarray
+### Maximum Subarray – (LeetCode 53)
 
 **Pattern:** Kadane’s Algorithm (Dynamic Programming)
 
@@ -115,3 +115,25 @@ d = {0: 1}
 
 **Interview Trigger:**
 > Maximum contiguous sum → **Kadane’s Algorithm**
+
+---
+### Rotate Array – (LeetCode 189)
+
+**Pattern:** Array Reversal  
+
+**Core Idea:**
+- Reverse entire array
+- Reverse first `k` elements
+- Reverse remaining `n - k` elements
+
+**Why It Works:**
+- Reversal preserves relative order after rotation
+- Achieves in-place rotation
+
+**Complexity:**
+- **Time:** `O(n)`
+- **Space:** `O(1)`
+
+**Interview Trigger:**
+> In-place rotation → **Reverse Array Pattern**
+
