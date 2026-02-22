@@ -59,4 +59,25 @@
 **Interview Trigger:**
 > Anagram grouping → **Frequency Array as Hash Key**
 
+---
+### Longest Consecutive Sequence – (LeetCode 128)
+
+**Pattern:** Hash Set + Sequence Expansion  
+
+**Core Idea:**
+- Store numbers in a set for O(1) lookup
+- Start only from sequence beginnings (`num - 1` not in set)
+- Expand forward to count length
+
+**Why It Works:**
+- Each number is processed once
+- Avoids redundant scans
+
+**Complexity:**
+- **Time:** `O(n)`
+- **Space:** `O(n)`
+
+**Interview Trigger:**
+> Consecutive elements → **Hash Set Expansion**
+
 
